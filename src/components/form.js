@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify' // Import ToastContainer and toast
-import 'react-toastify/dist/ReactToastify.css' // Import styles
 import './App.css'
 
 const baltimorePolygon = {
@@ -44,6 +42,8 @@ const App = () => {
     state: '',
     zipcode: '',
   })
+
+  const [result, setResult] = useState('')
 
   const handleChange = (e) => {
     const { id, value } = e.target
@@ -92,20 +92,18 @@ const App = () => {
         if (response.data.features.length > 0) {
           const coordinates = response.data.features[0].geometry.coordinates // [longitude, latitude]
           const isWithinPolygon = pointInPolygon(coordinates, baltimorePolygon)
-
-          // Use toast notifications instead of setting result state
-          toast(
+          setResult(
             isWithinPolygon
               ? 'You are within a permissible location!'
               : 'You are outside the permissible location.'
           )
         } else {
-          toast('Address not found.')
+          setResult('Address not found.')
         }
       })
       .catch((error) => {
         console.log('Geocoding error: ', error)
-        toast('An error occurred while checking the address.')
+        setResult('An error occurred while checking the address.')
       })
   }
 
@@ -265,8 +263,17 @@ const App = () => {
         </button>
       </form>
 
-      {/* Add ToastContainer to your return statement */}
-      <ToastContainer />
+      {result && (
+        <div
+          id="result"
+          style={{
+            marginTop: '20px',
+            color: result.includes('not found') ? 'red' : 'green',
+          }}
+        >
+          {result}
+        </div>
+      )}
     </section>
   )
 }

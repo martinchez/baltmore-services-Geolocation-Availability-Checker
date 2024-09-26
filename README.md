@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Geolocation Availability Checker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The **Geolocation Availability Checker** is a React application that allows users to check their availability within specific geolocation boundaries by entering their address. This application leverages the power of maps to enhance service experiences, making it easy for users to determine if they fall within permissible locations for various services.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User-friendly form for entering personal and address details.
+- Utilizes Mapbox API for geocoding addresses to geographic coordinates.
+- Checks if the entered address is within defined geolocation boundaries (e.g., Baltimore).
+- Provides immediate feedback to the user regarding their location status.
+- Responsive design for a seamless experience on different devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: A JavaScript library for building user interfaces.
+- **Axios**: A promise-based HTTP client for making requests to the Mapbox API.
+- **HTML/CSS**: For structuring and styling the application.
+- **Mapbox**: For geocoding and mapping functionalities.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the application locally, follow these steps:
 
-### `npm run build`
+1. **Clone the repository**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/martincase/geolocation-availability-checker.git
+   cd geolocation-availability-checker
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies:**
 
-### `npm run eject`
+   ```bash
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. ** set up your mapbox account**
+   . Replace the `mapboxToken` variable in the `src/App.js` file with your own Mapbox access token.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **start Development Server:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
 
-## Learn More
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Open Application:**
+   .Navigate to `http://localhost:3000` in your web browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+Fill out the eligibility quiz form by entering your personal details and address.
+Select your city from the dropdown list.
+Click the "Check Address" button to determine if you are within a permissible location.
+The application will display a message indicating whether the address is valid or not.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Fork the repository.
 
-### Making a Progressive Web App
+    .Create a new branch (git checkout -b feature-branch).
+    .Make your changes and commit them (git commit -m 'Add new feature').
+    .Push to the branch (git push origin feature-branch).
+    .Create a new Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the `MIT License`. See the LICENSE file for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
+    .Special thanks to Mapbox for providing the mapping API.
+    .Inspiration from various resources and documentation for building React applications.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contact
+For any inquiries or feedback, please reach out to `martinchegee@gmail.com`.
 
-### `npm run build` fails to minify
+### Customization Tips:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Repository Link**: Replace `https://github.com/yourusername/geolocation-availability-checker.git` with the actual URL of your repository.
+- **Mapbox Token**: Provide instructions on how users can obtain their own Mapbox token, if applicable.
+- **License**: Adjust the license section if you're using a different license.
+- **Contact Information**: Update the contact email to your preferred address.
